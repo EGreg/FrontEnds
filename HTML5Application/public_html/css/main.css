@@ -1,0 +1,87 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.marginTop20 {
+    margin-top:20px;
+}
+.marginBottom40 {
+    margin-bottom:40px;
+}
+
+.tab-content {
+    padding-top:20px;
+}
+
+#navbar .btn {
+    margin-top:8px;
+}
+#navbar .navbar-online-section .navbar-brand {
+    padding-top:6px;
+    padding-bottom:6px;
+}
+
+
+.glyphicon{
+    font-size: 16px;
+}
+
+.balanceBox {
+    /* 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 15px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    
+    */
+    float:right; 
+    width:500px; 
+    height:200px; 
+    margin-left:20px; 
+    margin-right:20px; 
+    text-align: center;
+    
+}
+.balanceBox .wrapBlockNumber {
+    position:absolute;
+}
+.balanceBox .wrapBlockNumber .blockNumber {
+    position:relative; 
+    font-size: 11px;
+    margin-left: 440px;
+    margin-bottom: 3px;
+}
+.balanceBox .wrapBlockNumber .blockTime {
+    position: relative;
+    margin-left: 326px;
+    margin-top: -8px;
+    font-size: 12px;
+}
+.balanceBox .wrapBlockNumber .blockJump {
+    position: relative;
+    margin-right: 400px;
+    margin-top: -20px;
+    font-size: 12px;
+}
+.blockTable tr th, .blockTable tr td {
+    padding:0.09rem;
+}
+/*
+.blockTable tr td {
+    text-align: left;
+}
+*/
+.blockTable tr th:nth-child(2) {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
