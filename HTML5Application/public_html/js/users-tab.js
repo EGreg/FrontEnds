@@ -213,6 +213,22 @@ class TabUsers {
                         if (!success) {return;}
                                 
                         break;
+                    case 'unstakeAndRemoveLiquidity':
+                                
+                        amount = $('#tabUsersUnstakeAndRemoveLiquidityAmount').val();
+                        
+                        objModal.addStep('stepUnstake1', 'Approving Community Tokens');
+                        objModal.addStep('stepUnstake2', 'Unstake');
+                        
+                        objModal.show('Processing transactions');
+                        
+                        success = await objModal.runStep('stepUnstake1', async function() {return await CommunityCoin.approve(CommunityCoin.address, amount)});
+                        if (!success) {return;}
+
+                        success = await objModal.runStep('stepUnstake2', async function() {return await CommunityCoin.unstakeAndRemoveLiquidity(amount)});
+                        if (!success) {return;}
+                                
+                        break;
                     case 'redeem':
                                 
                         amount = $('#tabUsersRedeemAmount').val();

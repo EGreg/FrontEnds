@@ -15,10 +15,25 @@ class TabFactories {
         this.fraction = 100000;
         this.constructorData = {
             CommunityCoinFactory:{
-                keys: ["CommunityCoin","CommunityStakingPoolFactory","CommunityStakingPool","CommunityStakingPoolErc20","CommunityRolesManagement"],
-                inputClasses:["jsCommunityCoinImpl","jsCommunityStakingPoolFactoryImpl","jsStakingPoolImpl","jsStakingPoolImplErc20","jsRolesManagementImpl"]
+                keys: [
+                    "CommunityCoin",
+                    "CommunityStakingPoolFactory",
+                    "CommunityStakingPool",
+                    "CommunityStakingPoolErc20",
+                    "CommunityRolesManagement"
+                ],
+                inputClasses:[
+                    "jsCommunityCoinImpl",
+                    "jsCommunityStakingPoolFactoryImpl",
+                    "jsStakingPoolImpl",
+                    "jsStakingPoolImplErc20",
+                    "jsRolesManagementImpl",
+                    "jsFactoriesReserveToken",
+                    "jsFactoriesTradedToken"
+                ]
             }
         };
+
     }
     refresh() {
         fetchAccountData();

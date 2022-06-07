@@ -44,7 +44,7 @@ function chainConstantsSetup(chainId) {
         // for local tests 
         "0x539": {
             relatedTo: '0x4',
-            importUrl: 'https://gist.githubusercontent.com/artman325/a7bbfc5f0bdd757887d9f109744d4345/raw/38fc5b5ea297c2a77ad0572ac14fbe5b7514de50/test-example.json'
+            importUrl: 'https://gist.githubusercontent.com/artman325/a7bbfc5f0bdd757887d9f109744d4345/raw/389019f43c4a72abf8c89121e136294ba4361147/test-example.json'
         }
     };
     

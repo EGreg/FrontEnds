@@ -100,8 +100,6 @@ class TabPools {
                 } else {
                     if (option == 'produce') {
 
-                        p.push($("#tabPoolsReserveToken").val());
-                        p.push($("#tabPoolsTradedToken").val());
                         p.push($("#tabPoolsDuration").val());
                         p.push([]);//p.push($("#tabPoolsDonations").val());
                         p.push($("#tabPoolsReserveTokenClaimFraction").val());
@@ -110,7 +108,7 @@ class TabPools {
                         p.push($("#tabPoolsNumerator").val());
                         p.push($("#tabPoolsDenominator").val());
 
-                        tx = await contract["produce(address,address,uint64,(address,uint256)[],uint64,uint64,uint64,uint64,uint64)"](...p);
+                        tx = await contract["produce(uint64,(address,uint256)[],uint64,uint64,uint64,uint64,uint64)"](...p);
 
                         rc = await tx.wait(); // 0ms, as tx is already confirmed
                         event = rc.events.find(event => event.event === 'InstanceCreated');

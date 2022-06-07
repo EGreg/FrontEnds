@@ -538,8 +538,13 @@ function fillCurrentAddress(id) {
 
 function fillFromStorage(id, key, name, attr) {
     let st = new ContractStorage(key);
+console.log(key);
+console.log(name);
+console.log('st.itemExists(name)=',st.itemExists(name));
     if (st.itemExists(name)) {
+console.log(name);
         let t = st.getItem(name);
+console.log(t);
         $(id).val(t[attr]);
     }
 }

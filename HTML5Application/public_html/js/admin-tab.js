@@ -42,7 +42,7 @@ class TabAdmins {
             
             let option = $("#tabAdmins .selectTemplate").val();
 
-            if (option == 'ImportFromStorage') {
+            if (option == 'ImportToStorage') {
                 try {
                 fetch(chainConstants['importUrl'])
                     .then(response => response.text())

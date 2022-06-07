@@ -130,7 +130,7 @@
                                 <option value="TestITRc">ITRc for testing</option>
                                 <option value="UniswapV2Factory">Uniswap: Create Pair</option>
                                 <option value="UniswapV2Router02">Uniswap: Add liquidityETH</option>
-                                <option value="ImportFromStorage">Import From Storage</option>
+                                <option value="ImportToStorage">Import To Storage</option>
                               </select>
                             </div>
                             <div class="tab-templateContent tab-pleasechoose">
@@ -206,7 +206,7 @@
                                 </form>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
-                            <div class="tab-templateContent tab-ImportFromStorage">
+                            <div class="tab-templateContent tab-ImportToStorage">
                                 <p>Try to import data to data storage</p>
                                 <button type="submit" class="btn btn-primary">Import</button>
                             </div>
@@ -265,6 +265,22 @@
                                     <div class="form-group">
                                         <label for="tabFactoriesRolesManagementImpl">communityRolesManagement address</label>
                                         <input type="text" class="form-control jsRolesManagementImpl" id="tabFactoriesRolesManagementImpl" placeholder="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tabFactoriesReserveToken">ReserveToken address</label>
+                                        <input type="text" class="form-control jsFactoriesReserveToken" id="tabFactoriesReserveToken" placeholder="address">
+                                        <small class="form-text text-muted">
+                                            reserveToken address of reserve token. like a WETH, USDT,USDC, etc.
+                                            <a href="javascript:$('#tabFactoriesReserveToken').val(chainConstants['weth']);">fill WETH address</a>
+                                        </small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="tabFactoriesTradedToken">Traded Token address</label>
+                                        <input type="text" class="form-control jsFactoriesTradedToken" id="tabFactoriesTradedToken" placeholder="address">
+                                        <small class="form-text text-muted">
+                                            tradedToken address. usual it's intercoin investor token
+                                            <a href="javascript:fillFromStorage('#tabFactoriesTradedToken', 'deployedImplementations', 'ITRc', 'address')">fill TITRc address if deployed before</a>
+                                        </small>
                                     </div>
                                   <a href="javascript:void(0)" class="jsPopulate">[populate from storage]</a>
                                   <button type="submit" class="btn btn-primary">Submit</button>
@@ -351,25 +367,6 @@
                                         <h5>Produce Staking Pool</h5>
                                     </div>
                                     
-        
-            
-                                    
-                                    <div class="form-group">
-                                        <label for="tabPoolsReserveToken">ReserveToken address</label>
-                                        <input type="text" class="form-control jsPoolsReserveToken" id="tabPoolsReserveToken" placeholder="address">
-                                        <small class="form-text text-muted">
-                                            reserveToken address of reserve token. like a WETH, USDT,USDC, etc.
-                                            <a href="javascript:$('#tabPoolsReserveToken').val(chainConstants['weth']);">fill WETH address</a>
-                                        </small>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="tabPoolsTradedToken">TradedToken address</label>
-                                        <input type="text" class="form-control jsPoolsTradedToken" id="tabPoolsTradedToken" placeholder="address">
-                                        <small class="form-text text-muted">
-                                            tradedToken address. usual it intercoin investor token
-                                            <a href="javascript:fillFromStorage('#tabPoolsTradedToken', 'deployedImplementations', 'ITRc', 'address')">fill TITRc address if deployed before</a>
-                                        </small>
-                                    </div>
                                     <div class="form-group">
                                         <label for="tabPoolsDuration">Duration</label>
                                         <input type="text" class="form-control jsPoolsDuration" id="tabPoolsDuration" placeholder="uint64">
@@ -473,6 +470,7 @@
                     </div>
                 </div>
             </div>
+            <!-- tabUsers -->
             <div class="tab-pane" id="tabUsers">
 
                 <div class="row">
@@ -486,6 +484,7 @@
                                 <option value="redeem">Redeem</option>
                                 <option value="redeemAndRemoveLiquidity">Redeem and Remove Liquidity</option>
                                 <option value="unstake">Unstake</option>
+                                <option value="unstakeAndRemoveLiquidity">Unstake and Remove Liquidity</option>
                                 <option value="simulateRedeemAndRemoveLiquidity">Simulate "Redeem And Remove Liquidity"</option>
                               </select>
                             </div>
@@ -606,6 +605,16 @@
                                     </small>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Unstake</button>
+                            </div>
+                            <div class="tab-templateContent tab-unstakeAndRemoveLiquidity">
+                                <div class="form-group">
+                                    <label for="tabUsersUnstakeAndRemoveLiquidityAmount">Amount to unstake</label>
+                                    <input type="text" class="form-control jsUnstakeAndRemoveLiquidityAmount" id="tabUsersUnstakeAndRemoveLiquidityAmount" placeholder="uint256">
+                                    <small class="form-text text-muted">
+                                        <a href="javascript:fillOneEth('#tabUsersUnstakeAndRemoveLiquidityAmount')">fill 1e18</a>
+                                    </small>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Unstake and Remove Liquidity</button>
                             </div>
                             <div class="tab-templateContent tab-redeem">
                                 <div class="form-group">
