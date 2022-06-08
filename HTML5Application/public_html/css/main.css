@@ -1,4 +1,7 @@
-
+html,
+body {
+    height: 100%;
+}
 
 /* ==========================================================================
    Author's custom styles
@@ -75,12 +78,28 @@
 
 
 
+.userBalance span {
+    font-weight: normal;
+}
 
+.mobileSketch {
+    
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+}
+.mobileSketch .inside {
+    border:2px dotted #cccccc;
+    padding:20px;
+}
 
-
-
-
-
+.mobileSketch .form-group a {
+    width:100%;
+}
 
 
 

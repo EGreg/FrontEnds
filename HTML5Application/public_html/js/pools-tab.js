@@ -101,6 +101,7 @@ class TabPools {
                     if (option == 'produce') {
 
                         p.push($("#tabPoolsDuration").val());
+                        p.push($("#tabPoolsBonusTokensFraction").val());
                         p.push([]);//p.push($("#tabPoolsDonations").val());
                         p.push($("#tabPoolsReserveTokenClaimFraction").val());
                         p.push($("#tabPoolsTradedTokenClaimFraction").val());
@@ -117,6 +118,7 @@ class TabPools {
 
                         p.push($("#tabPoolsErc20TokenErc20").val());
                         p.push($("#tabPoolsErc20Duration").val());
+                        p.push($("#tabPoolsErc20BonusTokensFraction").val());
                         p.push([]);//p.push($("#tabPoolsDonations").val());
                         p.push($("#tabPoolsErc20Numerator").val());
                         p.push($("#tabPoolsErc20Denominator").val());
